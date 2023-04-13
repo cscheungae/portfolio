@@ -1,8 +1,12 @@
 import React from 'react';
-import './home.scss';
 
 const Home = () => {
-  return <h1 className="home">Hi, I'm Billy Cheung</h1>;
+  return (
+    <div className="h-screen bg-gradient-to-r from-cyan-800 to-blue-900">
+      <h1 className="text-white">Hi, I'm Billy Cheung | Frontend Engineer</h1>
+      <p>This is a sample para</p>
+    </div>
+  );
 };
 
 export default Home;

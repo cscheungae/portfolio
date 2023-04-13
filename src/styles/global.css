@@ -2,22 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: ubuntu;
-  src: url(/fonts/Ubuntu-Regular.tff) format('tff');
-}
-@font-face {
-  font-family: ubuntu;
-  font-weight: 500;
-  src: url(/fonts/Ubuntu-Medium.tff) format('tff');
-}
-@font-face {
-  font-family: ubuntu;
-  font-weight: 700;
-  src: url(/fonts/Ubuntu-Bold.ttf) format('tff');
-} */
-
 body {
-  /* font-family: ubuntu, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  font-family: 'Roboto', sans-serif;
+  font-family: theme('fontFamily.body');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: theme('fontFamily.display');
 }

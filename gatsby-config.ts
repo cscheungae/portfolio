@@ -21,6 +21,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sass',
+    'gatsby-plugin-postcss',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -42,7 +43,44 @@ const config: GatsbyConfig = {
             name: `Roboto`,
             file: `https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap`,
           },
+          {
+            name: `Oswald`,
+            file: `https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap`,
+          },
         ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-favicons',
+      options: {
+        logo: './src/images/icon.png',
+        appName: 'Billy Cheung',
+        background: '#fff',
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          yandex: false,
+          windows: false,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Billy Cheung',
+        short_name: 'billyCheung',
+        start_url: '/',
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: 'standalone',
+        icon: 'src/images/coding.svg', // This path is relative to the root of the site.
+        // An optional attribute which provides support for CORS check.
+        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
+        // Any invalid keyword or empty string defaults to `anonymous`
+        crossOrigin: `use-credentials`,
       },
     },
   ],
