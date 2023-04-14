@@ -20,7 +20,7 @@ const Button = (props: aTagProps & { children: string }) => {
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulProject {
+      allContentfulProject(sort: { projectTitle: DESC }) {
         edges {
           node {
             id
