@@ -53,7 +53,10 @@ const Projects = () => {
   }));
 
   return (
-    <section id="projects" className="max-w-[90%] md:max-w-5xl mx-auto ">
+    <section
+      id="projects"
+      className="max-w-[90%] md:max-w-5xl mx-auto md:mx-20 lg:mx-auto"
+    >
       <h2 className="decoration-yellow-400 underline decoration-4 py-3 font-bold text-2xl tracking-widest mb-6">
         Projects
       </h2>

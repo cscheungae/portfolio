@@ -54,7 +54,7 @@ const Personal = () => {
   const aboutDesc = data.allContentfulAbout.edges[0].node.text.text;
 
   return (
-    <section className="max-w-[90%] md:max-w-5xl mx-auto md:flex ">
+    <section className="max-w-[90%] md:max-w-5xl mx-auto md:flex md:mx-20 lg:mx-auto">
       <div id="about" className="mb-6 mt-12 md:flex-1 md:mr-24">
         <h2 className="decoration-yellow-400 underline decoration-4 py-3 font-bold text-2xl tracking-widest mb-6">
           About
