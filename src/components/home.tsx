@@ -76,7 +76,7 @@ const Navigation = (props: { onClick: () => void }) => {
 };
 
 const Home = () => {
-  const { isSm } = useBreakpoint('sm');
+  const { isMd } = useBreakpoint('md');
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen((prevState) => !prevState);
@@ -84,7 +84,7 @@ const Home = () => {
     <div className="h-screen bg-gradient-to-r from-cyan-800 to-blue-900 relative md:static md:flex md:flex-col">
       <HamburgerMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
       <Transition
-        show={isMenuOpen || !isSm}
+        show={isMenuOpen || !isMd}
         enter="transition ease-in-out duration-300 transform"
         enterFrom="-translate-x-full"
         enterTo="translate-x-0"
